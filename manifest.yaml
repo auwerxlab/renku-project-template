@@ -8,6 +8,12 @@
   description: The simplest R-4.0-based renku project with a basic directory structure and necessary supporting files.
   variables:
     description: short description added at the beginning of the readme file
+- folder: R-renv
+  name: R Project with dependency management
+  description: A simple R-based renku project with a basic directory structure, necessary supporting files and R dependencies managed with renv.
+  variables:
+    Rversion: R version (3.5.2, 3.6.0, 3.6.1, 3.6.3, 4.0.0 available). Default 4.0.0.
+    description: short description added at the beginning of the readme file
 - folder: bioc-minimal
   name: R-Bioconductor (3.11) Project
   description: The simplest R bioconductor-3.11-based renku project with a basic directory structure and necessary supporting files.
