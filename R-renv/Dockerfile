@@ -37,8 +37,10 @@ RUN R -f /tmp/install.R
 ## Clean up the /home/rstudio directory to avoid confusion in nested R projects
 RUN rm /home/rstudio/.Rprofile; rm /home/rstudio/renv.lock
 
-## This will create a symbolic link to the container renv directory at the container startup
+## Create a symbolic link to the renv directory at startup
+USER root
 RUN echo "ln -s /home/rstudio/renv /home/rstudio/{{ __sanitized_project_name__ }}/renv" >> /post-init.sh
+USER ${NB_USER}
 
 # install the python dependencies
 COPY requirements.txt /tmp/
