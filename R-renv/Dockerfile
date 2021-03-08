@@ -6,7 +6,7 @@ ARG RVERSION={{ Rversion }}
 {% else %}
 ARG RVERSION=4.0.0
 {% endif %}
-ARG RENKU_BASE_IMAGE=renku/renkulab-r:${RVERSION}-renku0.10.4-0.6.3
+ARG RENKU_BASE_IMAGE=renku/renkulab-r:${RVERSION}-0.7.4
 FROM ${RENKU_BASE_IMAGE}
 
 # Uncomment and adapt if code is to be included in the image
