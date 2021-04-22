@@ -5,7 +5,7 @@ setwd('/home/rstudio')
 options(renv.consent = TRUE)
 write("options(renv.consent = TRUE)",
   file="/home/rstudio/.Rprofile", append = TRUE)
-install.packages('https://cran.r-project.org/src/contrib/Archive/renv/renv_0.11.0.tar.gz',
+install.packages('https://cran.r-project.org/src/contrib/Archive/renv/renv_0.13.1.tar.gz',
   repos = NULL, type = 'source', dependencies = TRUE)
 renv::init(force = TRUE)
 renv::restore(confirm = FALSE)
